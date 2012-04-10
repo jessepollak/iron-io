@@ -1,0 +1,7 @@
+What is the 'typhoeus' gem? It tells me to install it for "best performance," but I see no mention of it on the setup page. Also, this isn't a big problem, but might be helpful to say install the iron_worker gem for complete beginners.
+
+Took me awhile to find where the supported gems are..maybe put the Ruby docs that are in GitHub on the actual website
+
+YAML is formatted weird in some of the examples--double colon. Had to remove the extra colon to get it working in my version.
+
+Part about running it locally is a little confusing. I got an error when I tried calling the worker.wait_until_complete method on it when I was running it locally. Pretty obvious, but worth a comment.
