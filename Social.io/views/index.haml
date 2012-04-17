@@ -1,0 +1,26 @@
+!!! 5
+%html
+  %head
+    %script{:type => "text/javascript", :src => "http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"}
+    %script{:type => "text/javascript", :src => "js/highcharts.js"}
+    %script{:type => "text/javascript", :src => "js/chart.js"}
+    %link{:rel => "stylesheet", :href => "css/bootstrap.min.css", :type => "text/css"}
+    :css
+      .well {
+        width: 80%;
+        height: 510px;
+        margin: auto;
+      }
+      
+      #container {
+        margin: auto;
+      }
+      
+      h2 {
+        text-align: center;
+        margin: 10px 0 20px 0;
+      }
+  %body
+    %h2 Twitter vs. Facebook
+    .well
+      #container{:style => "width: 80%; height: 500px"}

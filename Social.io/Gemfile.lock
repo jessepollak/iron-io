@@ -31,12 +31,21 @@ GEM
     multi_json (1.2.0)
     multipart-post (1.1.5)
     rack (1.4.1)
+    rack-protection (1.2.0)
+      rack
     rest (0.2.0)
       rest-client
       rest-client
     rest-client (1.6.7)
       mime-types (>= 1.16)
+    shotgun (0.9)
+      rack (>= 1.0)
     simple_oauth (0.1.5)
+    sinatra (1.3.2)
+      rack (~> 1.3, >= 1.3.6)
+      rack-protection (~> 1.2)
+      tilt (~> 1.3, >= 1.3.3)
+    tilt (1.3.3)
     twitter (2.2.0)
       activesupport (>= 2.3.9, < 4)
       faraday (~> 0.7)
@@ -53,4 +62,6 @@ DEPENDENCIES
   iron_worker
   koala
   mongo
+  shotgun
+  sinatra
   twitter
