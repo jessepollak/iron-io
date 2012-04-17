@@ -1,5 +1,6 @@
 require 'iron_worker'
 require 'yaml'
+require 'active_support/core_ext'
 
 load 'social_worker.rb'
 
@@ -23,7 +24,4 @@ worker.mongo_db_name = config_data['mongo']['db_name']
 worker.mongo_user = config_data['mongo']['user']
 worker.mongo_password = config_data['mongo']['password']
 
-worker.run_local
-
-#status = worker.wait_until_complete
-#puts worker.get_log
+worker.schedule(:start_at => (Time.now + 24*60*60 - 10*60), :run_every => 60*60*24)
