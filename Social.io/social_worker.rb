@@ -28,7 +28,7 @@ class SocialWorker < IronWorker::Base
       end
     end
     m_store = {"type" => "Twitter", "date" => Time.now, "tweets" => daily_tweets}
-    #db.insert(m_store)
+    db.insert(m_store)
   end
     
   def store_facebook(db)
@@ -43,7 +43,7 @@ class SocialWorker < IronWorker::Base
       end
     end
     m_store = {"type" => "Facebook", "date" => Time.now, "posts" => daily_posts}
-    #db_insert(m_store)
+    db_insert(m_store)
   end
   
   def init_mongo
