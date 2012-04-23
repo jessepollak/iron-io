@@ -13,8 +13,13 @@ get '/data' do
   connection = Mongo::Connection.new(config_data['mongo']['host'], config_data['mongo']['port'])
   db = connection.db('Social-io')
   db.authenticate(config_data['mongo']['user'], config_data['mongo']['password'])
+  names = ["Jesse Pollak", "Emily Hayes", "Niki Sawhney", "Wes Haas"]
   collection = db['Jesse']
-  facebook = collection.find("type" => "Facebook").to_a
-  twitter = collection.find("type" => "Twitter").to_a
-  {:facebook => facebook, :twitter => twitter}.to_json
+  data = {}
+  names.each do |name|
+    facebook = collection.find("type" => "Facebook", "name" => name).to_a
+    twitter = collection.find("type" => "Twitter", "name" => name).to_a
+    data[name] = {:facebook => facebook, :twitter => twitter}
+  end
+  data.to_json
 end

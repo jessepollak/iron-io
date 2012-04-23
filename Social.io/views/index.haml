@@ -8,8 +8,9 @@
     :css
       .well {
         width: 80%;
-        height: 510px;
+        height: 550px;
         margin: auto;
+        margin: 10px auto 10px auto;
       }
       
       #container {
@@ -20,13 +21,22 @@
         text-align: center;
         margin: 10px 0 20px 0;
       }
+      
+      h3 {
+        text-align: center;
+        margin-bottom: 10px;
+      }
   %body
     %h2 Twitter vs. Facebook
     .well
-      #Jesse{:style => "width: 80%; height: 500px"}
+      %h3 Jesse
+      .container#Jesse{:style => "width: 80%; height: 500px"}
     .well
-      #Emily{:style => "width: 80%; height: 500px"}
+      %h3 Emily
+      .container#Emily{:style => "width: 80%; height: 500px"}
     .well
-      #Niki{:style => "width: 80%; height: 500px"}
+      %h3 Niki
+      .container#Niki{:style => "width: 80%; height: 500px"}
     .well
-      #Wes{:style => "width: 80%; height: 500px"}
+      %h3 Wes
+      .container#Wes{:style => "width: 80%; height: 500px"}
