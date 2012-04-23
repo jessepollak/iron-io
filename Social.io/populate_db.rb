@@ -22,6 +22,9 @@ store = []
   t = user.reject{|tweet| tweet.created_at.day != date.day || tweet.created_at.month != date.month}.collect {|tweet| tweet.text}
   store << {"name" => "Jesse Pollak", "type" => "Facebook", "date" => date.to_time, "posts" => f}
   store << {"name" => "Jesse Pollak", "type" => "Twitter", "date" => date.to_time, "tweets" => t}
+  puts date.to_time
+  puts f
+  puts t
 end
 
 friend_names.each_with_index do |name, i|
@@ -35,4 +38,4 @@ friend_names.each_with_index do |name, i|
   end
 end
 
-collection.insert(store)
+#collection.insert(store)

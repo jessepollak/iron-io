@@ -8,9 +8,11 @@ $(document).ready(function() {
 					var d = data[name];
 					var fb = [];
 					var tw = [];
+					console.log(name);
 					for (var i = 0; i < d.facebook.length; i++) {
 						var f = d.facebook[i]
 						fb.push(f.posts.length);
+						console.log(f.posts);
 					}
 					for (var i = 0; i < d.twitter.length; i++) {
 						var t = d.twitter[i];
@@ -36,12 +38,12 @@ $(document).ready(function() {
 				     series: [{
 				        name: 'Facebook',
 				        data: fb,
-								pointStart: Date.UTC(2012, 2, 16),
+								pointStart: Date.UTC(2012, 2, 22),
 								pointInterval: 24*3600*1000 //one day
 				     }, {
 				        name: 'Twitter',
 				        data: tw,
-								pointStart: Date.UTC(2012, 2, 16),
+								pointStart: Date.UTC(2012, 2, 22),
 								pointInterval: 24*3600*1000 //one day
 				     }]
 				  });

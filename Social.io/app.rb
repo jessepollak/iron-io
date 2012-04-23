@@ -18,7 +18,9 @@ get '/data' do
   data = {}
   names.each do |name|
     facebook = collection.find("type" => "Facebook", "name" => name).to_a
+    facebook.sort!{|x,y| x['date'] <=> y['date']}
     twitter = collection.find("type" => "Twitter", "name" => name).to_a
+    twitter.sort!{|x,y| x['date'] <=> y['date']}
     data[name] = {:facebook => facebook, :twitter => twitter}
   end
   data.to_json
