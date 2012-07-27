@@ -1,0 +1,6 @@
+source "http://rubygems.org"
+gem 'iron_worker'
+gem 'mongo'
+gem 'bson'
+gem 'bson_ext'
+gem 'nokogiri'
